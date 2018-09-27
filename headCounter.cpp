@@ -393,9 +393,9 @@ int main(int argc, char *argv[])
       Rect r = current_faces[i];
       Point center;
 
-      rectangle(testImg, r, Scalar(0,0,255), 2,7,5);//doing vector quantization with better pixel quality will increase the accuracy.
-      center.x = cvRound((ROI.x + r.x + r.width*0.8));
-      center.y = cvRound((ROI.y + r.y + r.height*0.8));
+      rectangle(testImg, r, Scalar(0,0,255), 2,5,3);//doing wavelength quantization will increase the pixel quality and accuracy as well.
+      center.x = cvRound((ROI.x + r.x + r.width*0.7));
+      center.y = cvRound((ROI.y + r.y + r.height*0.7));
 
       pastFaces.push_back(cvRound((ROI.x + r.x + r.width*0.5)));
       pastFaces.push_back(cvRound((ROI.y + r.y + r.height*0.5)));
